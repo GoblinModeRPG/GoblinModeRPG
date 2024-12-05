@@ -30,8 +30,5 @@
   "main": "AgoraRTC_N-4.17.0.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gh-pages": "^6.2.0"
-  }
+  "license": "ISC"
 }
