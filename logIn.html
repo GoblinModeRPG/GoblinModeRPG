@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <meta name="viewport" content= "width=device-width, intial-scale=1.0">
+</head>
+<body>
+    <div id="login" class="login-background">
+    <div class="zooming-bg">
+        <div class="welcomeBanner">
+            <h1>Welcome</h1>
+        </div>
+    <div class="welcomeRibbon">
+        <img id= "goblin-icon" src="./images/dragonLogoOrange.png">
+    </div>       
+        <div class="login-content" id="loginInfo">
+            <img src="./images/loginLabel.png">
+            
+            <form id='nameForm' action="home.html">
+                <div class='form-uname'>
+                    
+                    <label id='nameLable' for='nameField'>Email:</label>
+                    <input id='nameField' type='text' maxlength='25' placeholder="Goblin@gmail.com..."></input>
+                    <label id='passLable' for='nameField'> Password:</label>
+                    <input id='passField' type='text' maxlength='25' placeholder="goblinsRule..."></input>
+
+                </div>
+                <div class='form-sub'>
+            
+                    <button id='subButton2' type='button'>Log In</button>
+                    <button id='goBackButton' type ='button'> Back </button>
+                </div>
+                
+            </form>
+        </div>
+            
+       
+        </div>
+    </div>
+    <footer>
+        <script>
+            var date = document.lastModified;
+            document.write("This page was last modified on: date " + date);
+
+        </script>
+    </footer>
+
+   
+    
+</body>
+</html>
+
+<script type = "module">
+    import { tryLogIn, user} from "./firebaseManager.js";
+    import {uploadFile} from "./fileManager.js";
+    
+
+    async function getUserName() {
+        var nameField = document.getElementById('nameField').value;
+        var passField = document.getElementById('passField').value;
+
+        try{
+            var loggedIn = await tryLogIn(nameField, passField);
+       
+        } catch (error){
+            console.log("error: " + error);
+        }
+        if(loggedIn){
+            window.location.replace("home.html")
+            console.log("user logged in")
+        }
+        else{
+            window.alert("invalid log in");
+        } 
+        
+    }
+    function goBack(){
+        window.location.replace('index.html');
+    }
+
+    var logInButton = document.getElementById('subButton2');
+    logInButton.addEventListener('click',getUserName, false);
+
+    var backButton = document.getElementById('goBackButton');
+    backButton.addEventListener('click',goBack, false);
+    
+   
+</script>

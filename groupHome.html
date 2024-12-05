@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>characterSheet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="groupHomeWrap">
+    <!-- <header><h1>Home</h1></header> -->
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li> <div id='logOut' type='button'>Log Out</div></li>
+        </ul>
+        
+    </nav>
+    
+    <div id="groupPage">
+        
+        
+    <table class ="groupTable">
+        <tr>
+            <td id="groupNav">
+                <div class="sidebar" id = "sidebarGH">
+                
+                    <ul>
+                        <li>
+                            <div class="a" onclick="charSheetSwitch()">
+                                <i class = "bx bxs-contact"></i>
+                                
+                            </div>
+                            <span class="tooltip">Character Sheet</span>
+                        </li>
+                        <li>
+                            <div class="a" onclick = "inventorySwitch()">
+                                <i class = "bx bxs-backpack"></i>
+                                
+                            </div>
+                            <span class="tooltip">Inventory</span>
+                        </li>
+                        <li>
+                            <div class="a" onclick ="spellBookSwitch()">
+                                <i class = "bx bxs-book"></i>
+                                
+                            </div>
+                            <span class="tooltip">Spellbook</span>
+                        </li>
+                        
+                        <li>
+                            <div class="a" onclick = "notesSwitch()">
+                                <i class = "bx bxs-notepad"></i>
+                                
+                            </div>
+                            <span class="tooltip">Notes</span>
+                        </li>
+                        <li>
+                            <div class="a" onclick = "videoCall()">
+                                <i class= "bx bxs-video"></i>
+                            </div>
+                            <span class="tooltip">Start a Call!</span>
+                        </li>
+                        
+                    
+                    </ul>
+                </div>
+            </td>
+            
+            <td id="display-wrap">
+                <iframe id="displayWindow"
+                src = "groupHomeDisplays/characterSheet.html" 
+                frameBorder = "0" 
+                scrolling= "auto" 
+                >
+                </iframe>
+            </td>
+        </tr>
+    </table>
+</div> 
+    
+    </div>
+</body>
+<footer>
+    <script>
+        var date = document.lastModified;
+        document.write("This page was last modified on: date " + date);
+    </script>
+</footer>
+<script type = "module">
+    import {logUserOut} from "./firebaseManager.js";
+    var logOutButton = document.getElementById('logOut');
+    logOutButton.addEventListener('click', logMeOut, false);
+
+    async function logMeOut(){
+            var loggedOut = await logUserOut();
+            if(loggedOut){
+                window.location.replace("index.html");
+            }
+    }
+</script>
+<script>
+    var userID = localStorage.getItem("currentUid");
+    var groupID = localStorage.getItem("curID");
+
+
+    console.log("Current group is " + localStorage.getItem("curID"));
+
+    var menubtn = document.getElementById("menubtn");
+
+    function charSheetSwitch(){
+        displayWindow.src = 'groupHomeDisplays/characterSheet.html';
+    }
+    function inventorySwitch(){ 
+        var displayWindow = document.getElementById('displayWindow');
+        displayWindow.src = "groupHomeDisplays/inventory.html";
+    }
+    function spellBookSwitch(){
+        displayWindow.src = "groupHomeDisplays/spellbook.html";
+    }
+    function notesSwitch(){
+        displayWindow.src = "groupHomeDisplays/notes.html";
+    }
+    function videoCall(){
+        window.location.pathname = '/video.html'
+    }
+    
+</script>
+</html>

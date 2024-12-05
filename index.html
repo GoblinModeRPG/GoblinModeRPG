@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <meta name="viewport" content= "width=device-width, intial-scale=1.0">
+</head>
+
+<body>
+    <div id="welcome" class="login-background" >
+        <div class="zooming-bg">
+    <div id="welcome-text" class="welcomeBanner">
+        <h1>Welcome to Goblin Mode</h1>
+        <p>Get into goblin mode with your friends! 
+            Log in or create an account, then create or join a group.  
+            Once you have a group you can video call and play dnd 
+            all while using helpful tools our website provides.</p>
+    </div>
+    <div class="welcomeRibbon">
+        <ul>
+        <img id= "goblin-icon" src="./images/dragonLogoOrange.png">
+        
+        </ul>
+    </div>
+    
+      
+       
+        <div id="welcome-content" class="login-content">
+            <ul>
+            <li><button id="login-btn">Login to Account</button></li>
+            <li><button id="createacc-btn">Create New Account</button></li>
+            </ul>
+        </div>
+
+        </div>
+        </div>
+    </div>
+    </div>
+  
+
+    <footer>
+        <script>
+            var date = document.lastModified;
+            document.write("This page was last modified on: date " + date);
+
+        </script>
+    </footer>
+
+    
+    
+</body>
+</html>
+<script>
+    function goToLogIn(){
+        window.location.replace("logIn.html");
+    }
+    function goToCreateAccount(){
+        window.location.replace("createAcc.html");
+    }
+    var logButton = document.getElementById('login-btn');
+    var createAccButton = document.getElementById('createacc-btn');
+    logButton.addEventListener('click', goToLogIn); 
+    createAccButton.addEventListener('click',goToCreateAccount);
+   
+</script>

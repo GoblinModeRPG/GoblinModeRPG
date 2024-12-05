@@ -1,0 +1,34 @@
+ <div id="videoSideBar">
+        <table id = "mainTable">
+            <tr>
+               
+                <td>
+                    <table id = "videoDisplayWindow">
+                        <tr>
+                        <td>
+                            <table >  
+                                
+                                    <td><button id="charSheet">Character Sheet</button></td>
+                                
+                                
+                                    <td><button id="inventorybutton">Inventory</button></td>
+                               
+                               
+                                    <td><button id="spellBook">Spell Book</button></td>
+                              
+                                    <td><button id="notes">Notes</button></td>  
+                              
+                            </table>
+                        </tr>
+                            </td>
+                            <td></td>
+                        
+                            
+                    </table>
+                </td>
+                <td>
+                    <button id="showBar"> ></button>
+                </td>
+            </tr> 
+      </table>   
+    </div>

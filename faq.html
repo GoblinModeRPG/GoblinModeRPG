@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <meta name="viewport" content= "width=device-width, intial-scale=1.0">
+</head>
+<body>
+    <div id="faq-wrapper">
+    <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li> <div id='logOut' type='button'>Log Out</div></li>
+        </ul>
+        
+      </nav>
+    <h1>Meet the Creators</h1>
+    <table id="faqTable">
+        <tr>
+            <td><img src="./images/border.png"></td>
+            <td><img src="./images/border.png"></td>
+        </tr>
+        <tr>
+            <td>Arya Whitehorn</td>
+            <td>Eleanor Hayes</td>
+        </tr>
+        <tr>
+            <td>About Me: </td>
+            <td>About Me: </td>
+        </tr>
+        <tr>
+            <td>Resume:</td>
+            <td>Resume:</td>
+        </tr>
+    </table>
+    <button id="iconBtn">Icon Links</button>
+    <ul id="icon-links" >
+        <li><a href="https://www.flaticon.com/free-icons/dragon" title="dragon icons">Dragon icons created by Icongeek26 - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/dragon" title="dragon icons">Dragon icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/miscellaneous" title="miscellaneous icons">Miscellaneous icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/miscellaneous" title="miscellaneous icons">Miscellaneous icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/magic" title="magic icons">Magic icons created by Culmbio - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/genre" title="genre icons">Genre icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/potion" title="potion icons">Potion icons created by Culmbio - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/papyrus" title="papyrus icons">Papyrus icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/medival" title="medival icons">Medival icons created by JM Graphic - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/goblin" title="goblin icons">Goblin icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/quill" title="quill icons">Quill icons created by iconixar - Flaticon</a>"></a></li>
+        <li><a href="https://www.flaticon.com/free-icons/quill" title="quill icons">Quill icons created by iconixar - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/feather" title="feather icons">Feather icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.freepik.com/search">Icon by Freepik</a></li>
+        <li><a href="https://boxicons.com/">Boxicons</a></li>
+
+    </ul>
+    </div>
+</body>
+<footer>
+    <script>
+        var date = document.lastModified;
+        document.write("This page was last modified on: date " + date);
+    </script>
+    <script type = "module">
+        import {logUserOut} from "./firebaseManager.js";
+        var logOutButton = document.getElementById('logOut');
+        logOutButton.addEventListener('click', logMeOut, false);
+        
+        var iconBtn = document.getElementById('iconBtn');
+        iconBtn.addEventListener('click', collapse, false);
+
+        var iconLinks = document.getElementById('icon-links');
+
+        function collapse(){
+            iconLinks.classList.toggle('open');
+        }
+        async function logMeOut(){
+                var loggedOut = await logUserOut();
+                if(loggedOut){
+                    window.location.replace("index.html");
+                }
+        }
+    </script>
+</footer>
+</html>
+
+

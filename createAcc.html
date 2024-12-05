@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <meta name="viewport" content= "width=device-width, intial-scale=1.0">
+</head>
+
+<body>
+    <div id="createAcct" class="login-background">
+        <div class="zooming-bg">
+
+            <div class="welcomeBanner">
+                <h1>Welcome</h1>
+            </div>
+    <div class="welcomeRibbon">
+        <img id= "goblin-icon" src="./images/dragonLogoOrange.png">
+        
+    </div>
+        <div class="login-content" id="createAccInfo">
+            <img src="./images/createAcctLabel.png">
+        
+            <form id='nameForm' action="home.html">
+                <div class='form-uname'>
+                    <label id='nameLable' for='nameField'>Email:</label>
+                    <input id='nameField' type='text' maxlength='25' placeholder="goblin@gmail.com..."></input>
+                    <label id='displayLable' for='displayField'>Desired Display Name:</label>
+                    <input id='displayField' type='text' maxlength='25' placeholder="Goblin..."></input>
+                    <label id='passLable' for='nameField'>Password:</label>
+                    <input id='passField' type='text' maxlength='25' placeholder="goblinsRule..."></input>
+                    <label id='passLable2' for='nameField'>Check Password:</label>
+                    <input id='passField2' type='text' maxlength='25' placeholder="goblinsRule..."></input>
+
+
+                </div>
+                <div class='form-sub'>
+                    <button id='subButton' type='button'>Create Account</button>
+                    <button id='goBackButton' type ='button'> Back </button>  
+                </div>
+            </form>
+        </div>
+            
+        
+            
+        </div>
+    </div>
+    <footer>
+        <script>
+            var date = document.lastModified;
+            document.write("This page was last modified on: date " + date);
+
+        </script>
+    </footer>
+
+   
+    
+</body>
+</html>
+
+
+<script type="module">
+    import {createUserAuth, user, createUserData, setDisplayName} from "./firebaseManager.js";
+
+    
+   async function getUserName() {
+        
+        var nameField = document.getElementById('nameField').value;
+        var passField = document.getElementById('passField').value;
+        var displayField = document.getElementById('displayField').value;
+
+        
+        try{
+        var initializedUser = await createUserAuth(nameField,passField);
+        var initializedDisplay = await setDisplayName(localStorage.getItem("currentUid"),displayField);
+
+        
+        } catch (error){
+            console.log("error: " + error);
+        }
+        if( initializedUser){
+            window.location.replace("home.html");   
+        }
+        else{
+            window.alert("user name is taken!!!!!");
+        } 
+    }
+    function goBack(){
+        window.location.replace('index.html');
+    }
+
+    var subButton = document.getElementById('subButton');
+    subButton.addEventListener('click', getUserName, false); 
+    
+    var backButton = document.getElementById('goBackButton');
+    backButton.addEventListener('click',goBack, false);
+    
+   
+</script>
+

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <meta name="viewport" content= "width=device-width, intial-scale=1.0">
+</head>
+<body >
+    <div id="home">
+    <!-- <header><h1>Home</h1></header> -->
+        
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li> <div id='logOut' type='button'>Log Out</div></li>
+          </ul>
+          
+        </nav>
+    
+    <div id="groupButtons">
+      <button id='newGroup' type='button'> <img src="images/createGroupbtn.png"></button>
+      <button id='joinGroup' type='button'><img src="images/joinGroupbtn.png"></button>
+    </div>
+
+    <div >
+    <main>
+        
+        
+        <div class="popup" id="popup1">
+            <form id='nameForm' action="home.html">
+                <div class='form-uname'>
+                    <label id='nameLabel' for='groupName'>Group Name:</label>
+                    <input id='groupName' type='text' maxlength='25'></input>
+                </div>
+                <div class='form-sub'>
+            
+                    <button id='subButton' type='button'>OK</button>
+                    <button id='exitbutton' type='button'>EXIT</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="popup" id="popup2">
+            <form id='nameForm' action="home.html">
+                <div class='form-uname'>
+                    <label id='nameLabel' for='groupID'>Group ID:</label>
+                    <input id='groupID' type='text' maxlength='25'></input>
+                </div>
+                <div class='form-sub'>
+            
+                    <button id='subButton2' type='button'>OK</button>
+                    <button id='exitbutton2' type='button'>EXIT</button>
+                </div>
+            </form>
+        </div>
+        
+
+
+        <table class="flipTable">
+            <thead>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id = 'group0' class="flip-box">
+                            <div class="flip-box-inner">
+                              <div class="flip-box-front">
+                                <div id = 'gname0'>groupName</div>
+
+                                <img src="./images/dragon2.png"> 
+                                
+                              </div>
+                              <div class="flip-box-back">
+                                <div class = "fbb-info">
+                                  <ul class = "flipbox-ul">
+                                  <li><h3 id = 'GIDBack0'> group ID</h3></li>
+                                  
+                                  <li><button id="home0"> Group Home</button></li>
+                                  <li><button id='leave0' >Leave Group</button></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id = 'group1' class="flip-box">
+                            <div class="flip-box-inner">
+                              <div class="flip-box-front">
+                                <div id = 'gname1'>groupName</div>
+                                <img src="./images/fantasy.png">
+                              </div>
+                              <div class="flip-box-back">
+                                <div class = "fbb-info">
+                                  <ul class = "flipbox-ul">
+                                    <li><h3 id = 'GIDBack1'> group ID</h3></li>
+                          
+                                  <li><button id="home1"> Group Home</button></li>
+                                  <li><button id='leave1'>Leave Group</button></li>
+                                  
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div id = 'group2' class="flip-box">
+                            <div class="flip-box-inner">
+                              <div class="flip-box-front">
+                                <div id = 'gname2'>groupName</div>
+                                <img src="./images/spell-book.png">
+                              </div>
+                              <div class="flip-box-back">
+                                <div class = "fbb-info">
+                                  <ul class = "flipbox-ul">
+                                    <li><h3 id = 'GIDBack2'> group ID</h3></li>
+                                  
+                                  <li><button id="home2"> Group Home</button></li>
+                                  <li><button id='leave2'>Leave Group</button></li>
+                                </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <div id = 'group3' class="flip-box">
+                            <div class="flip-box-inner">
+                              <div class="flip-box-front">
+                                <div id = 'gname3'>groupName</div>
+                                <img src="./images/sword.png">
+                              </div>
+                              <div class="flip-box-back">
+                                <div class = "fbb-info">
+                                  <ul class = "flipbox-ul">
+                                    <li><h3 id = 'GIDBack3'> group ID</h3></li>
+                                  
+                                  <li><button id="home3"> Group Home</button></li>
+                                  <li><button id='leave3'>Leave Group</button></li>
+                                </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div id = 'group4' class="flip-box">
+                            <div class="flip-box-inner">
+                              <div class="flip-box-front">
+                                <div id = 'gname4'>groupName</div>
+                                <img src="./images/bow-and-arrow.png">
+                              </div>
+                              <div class="flip-box-back">
+                                <div class = "fbb-info">
+                                  <ul class = "flipbox-ul">
+                                    <li><h3 id = 'GIDBack4'> group ID</h3></li>
+                                  
+                                  <li><button id="home4"> Group Home</button></li>
+                                  <li><button id='leave4'>Leave Group</button></li>
+                                </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id = 'group5' class="flip-box">
+                            <div class="flip-box-inner">
+                              <div class="flip-box-front">
+                                <div id = 'gname5'>groupName</div>
+                                <img src="./images/potion.png">
+                              </div>
+                              <div class="flip-box-back">
+                                <div class = "fbb-info">
+                                  <ul class = "flipbox-ul">
+                                  <li><h3 id = 'GIDBack5'> group ID</h3></li>
+                                  
+                                  <li><button id="home5"> Group Home</button></li>
+                                    <li><button id='leave5' >Leave Group</button></li>
+                                </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+    
+    <script type="module">
+        import {checkIfGroupEmpty, createNewGroup, addUserGroup, user, getLastGroupID, logUserOut, addGroupToUser, getListOfGroups, getCampaignName, removeGroupFromUser, removeUserFromGroup, addNotesPath} from "./firebaseManager.js";
+        
+
+        console.log("you are logged in, " + localStorage.getItem('currentEmail') + " " + localStorage.getItem('currentUid'));
+
+        var popup1 = document.getElementById('popup1');
+        var popup2 = document.getElementById('popup2');
+
+       
+        
+        function openPopup1(){
+          if(full >= 5){
+              window.alert("You have reached the max number of groups")
+            }
+          else{
+            popup1.classList.add("open-popup");
+          }
+            
+        }
+        function exitPopup(){
+          popup1.classList.remove("open-popup");
+        }
+        async function closePopup1(popup){
+          var groupName = document.getElementById('groupName').value;
+          console.log(groupName);
+
+          //make sure groupname is not empty string
+          if (typeof groupName === "string" && groupName.length === 0) {
+            console.log("The string is empty, will not create group");
+            window.alert("Please enter a Group name to create your group");
+          } else if (groupName === null) {
+            console.log("The string is null, will not create group");
+            window.alert("Please enter a Group name to create your group");
+          } else {
+            console.log("The string is not empty or null, added to group");
+            await createNewGroup(groupName);
+            var curGroupID = await getLastGroupID();
+            await addUserGroup(localStorage.getItem('currentUid'), curGroupID, localStorage.getItem('currentEmail'));
+            var campaignName = await getCampaignName(curGroupID);
+            await addGroupToUser(localStorage.getItem('currentUid'), curGroupID,campaignName);
+            await addNotesPath(localStorage.getItem('currentUid'), curGroupID,campaignName);
+            window.location.reload();
+            //put user alert if their input is bad
+          }
+          popup1.classList.remove("open-popup");
+          
+       }
+        
+        function openPopup2(){
+            if(full >= 5){
+              window.alert("You have reached the max number of groups")
+            }
+            else{
+              popup2.classList.add("open-popup");
+            }
+            
+        }
+        function exitPopup2(){
+          popup2.classList.remove("open-popup");
+        }
+        async function closePopup2(){
+            popup2.classList.remove("open-popup");
+    
+            var groupID = document.getElementById('groupID').value;
+            //check if groupID exists
+            var groupExists = await checkIfGroupEmpty(groupID);
+            console.log("group exists is " + groupExists);
+            if(groupExists){
+              window.alert("That group ID does not exist");
+            }
+            else{
+              console.log(groupName);
+              await addUserGroup(localStorage.getItem('currentUid'), groupID, localStorage.getItem('currentEmail'));
+              var campaignName = await getCampaignName(groupID);
+              await addGroupToUser(localStorage.getItem('currentUid'), groupID, campaignName);
+              
+              window.location.reload();
+            }
+            
+        }
+        async function logMeOut(){
+            var loggedOut = await logUserOut();
+            if(loggedOut){
+                window.location.replace("index.html");
+            }
+        }
+
+        var newGroup = document.getElementById('newGroup');
+        newGroup.addEventListener('click', openPopup1, false); 
+        var joinGroup = document.getElementById('joinGroup');
+        joinGroup.addEventListener('click', openPopup2, false);
+        
+        var subButton = document.getElementById('subButton');
+        subButton.addEventListener('click', closePopup1, false); 
+        var subButton2 = document.getElementById('subButton2');
+        subButton2.addEventListener('click', closePopup2, false); 
+
+        var exitbutton = document.getElementById('exitbutton');
+        exitbutton.addEventListener('click', exitPopup, false); 
+        var exitbutton2 = document.getElementById('exitbutton2');
+        exitbutton2.addEventListener('click', exitPopup2, false); 
+
+        var logOutButton = document.getElementById('logOut');
+        logOutButton.addEventListener('click', logMeOut, false);
+
+        var group0 = document.getElementById("group0");
+        var group1 = document.getElementById("group1");
+        var group2 = document.getElementById("group2");
+        var group3 = document.getElementById("group3");
+        var group4 = document.getElementById("group4");
+        var group5 = document.getElementById("group5");
+
+        var gname0 = document.getElementById("gname0");
+        var gname1 = document.getElementById("gname1");
+        var gname2 = document.getElementById("gname2");
+        var gname3 = document.getElementById("gname3");
+        var gname4 = document.getElementById("gname4");
+        var gname5 = document.getElementById("gname5");
+
+        var gid0 = document.getElementById("GIDBack0");
+        var gid1 = document.getElementById("GIDBack1");
+        var gid2 = document.getElementById("GIDBack2");
+        var gid3 = document.getElementById("GIDBack3");
+        var gid4 = document.getElementById("GIDBack4");
+        var gid5 = document.getElementById("GIDBack5");
+
+
+        var emptyDisplay = [group0,group1,group2,group3,group4,group5];
+        var emptyGnames = [gname0,gname1,gname2,gname3,gname4,gname5];
+        var gidBacks = [gid0,gid1,gid2,gid3,gid4,gid5];
+
+        //Get the list of current groups and display them with a listener 
+        var groupsArray = await getListOfGroups();
+        console.log("get list of groups finished");
+
+        var full;
+        for(let i = 0; i < 6; i++){
+          console.log("group at index " + i + " is " + groupsArray[i]);
+          if(groupsArray[i] == 0){
+            break;
+          }
+          //group0.style.display = 'block';
+          emptyDisplay[i].style.display = 'block';
+          var newName = await getCampaignName(groupsArray[i]);
+          console.log("campaign name" + newName);
+          emptyGnames[i].textContent = newName;
+          gidBacks[i].textContent = "Group ID:" + groupsArray[i];
+          full = i;
+        }
+        
+        //User quit group listeners
+        var leave0 = document.getElementById('leave0');
+        leave0.addEventListener('click', leaveGroup0, false);
+        var leave1 = document.getElementById('leave1');
+        leave1.addEventListener('click', leaveGroup1, false);
+        var leave2 = document.getElementById('leave2');
+        leave2.addEventListener('click', leaveGroup2, false);
+        var leave3 = document.getElementById('leave3');
+        leave3.addEventListener('click', leaveGroup3, false);
+        var leave4 = document.getElementById('leave4');
+        leave4.addEventListener('click', leaveGroup4, false);
+        var leave5 = document.getElementById('leave5');
+        leave5.addEventListener('click', leaveGroup5, false);
+
+        //listener functions to leave group
+        async function leaveGroup0(){
+          //remove group from database groups
+          await removeGroupFromUser(groupsArray[0]);
+          //remove from user database
+          await removeUserFromGroup(groupsArray[0]);
+          //remove from display
+          window.location.reload();
+        }
+        async function leaveGroup1(){
+          //remove group from database groups
+          await removeGroupFromUser(groupsArray[1]);
+          //remove from user database
+          await removeUserFromGroup(groupsArray[1]);
+          //remove from display
+          window.location.reload();
+        }
+        async function leaveGroup2(){
+          //remove group from database groups
+          await removeGroupFromUser(groupsArray[2]);
+          //remove from user database
+          await removeUserFromGroup(groupsArray[2]);
+          //remove from display
+          window.location.reload();
+        }
+        async function leaveGroup3(){
+          //remove group from database groups
+          await removeGroupFromUser(groupsArray[3]);
+          //remove from user database
+          await removeUserFromGroup(groupsArray[3]);
+          //remove from display
+          window.location.reload();
+        }
+        async function leaveGroup4(){
+          //remove group from database groups
+          await removeGroupFromUser(groupsArray[4]);
+          //remove from user database
+          await removeUserFromGroup(groupsArray[4]);
+          //remove from display
+          window.location.reload();
+        }
+        async function leaveGroup5(){
+          //remove group from database groups
+          await removeGroupFromUser(groupsArray[5]);
+          //remove from user database
+          await removeUserFromGroup(groupsArray[5]);
+          //remove from display
+          window.location.reload();
+        }
+
+        var home0 = document.getElementById('home0');
+        home0.addEventListener('click', goHome0, false);
+        var home1 = document.getElementById('home1');
+        home1.addEventListener('click', goHome1, false);
+        var home2 = document.getElementById('home2');
+        home2.addEventListener('click', goHome2, false);
+        var home3 = document.getElementById('home3');
+        home3.addEventListener('click', goHome3, false);
+        var home4 = document.getElementById('home4');
+        home4.addEventListener('click', goHome4, false);
+        var home5 = document.getElementById('home5');
+        home5.addEventListener('click', goHome5, false);
+
+      function goHome0(){
+        //get the group id
+        var id = groupsArray[0];
+
+        //save locally
+        localStorage.setItem("curID" , id);
+
+        //swap to group page
+        window.location.replace("groupHome.html");
+      }
+      function goHome1(){
+        //get the group id
+        var id = groupsArray[1];
+
+        //save locally
+        localStorage.setItem("curID" , id);
+
+        //swap to group page
+        window.location.replace("groupHome.html");
+      }
+      function goHome2(){
+        //get the group id
+        var id = groupsArray[2];
+
+        //save locally
+        localStorage.setItem("curID" , id);
+
+        //swap to group page
+        window.location.replace("groupHome.html");
+      }
+      function goHome3(){
+        //get the group id
+        var id = groupsArray[3];
+
+        //save locally
+        localStorage.setItem("curID" , id);
+
+        //swap to group page
+        window.location.replace("groupHome.html");
+      }
+      function goHome4(){
+        //get the group id
+        var id = groupsArray[4];
+
+        //save locally
+        localStorage.setItem("curID" , id);
+
+        //swap to group page
+        window.location.replace("groupHome.html");
+      }
+      function goHome5(){
+        //get the group id
+        var id = groupsArray[5];
+
+        //save locally
+        localStorage.setItem("curID" , id);
+
+        //swap to group page
+        window.location.replace("groupHome.html");
+      }
+        
+    </script> 
+
+</div> 
+
+</div>
+</body>
+<footer>
+  <script>
+      var date = document.lastModified;
+      document.write("This page was last modified on: date " + date);
+  </script>
+</footer>
+</html>
+
