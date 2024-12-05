@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>characterSheet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!--[if 1t IE 9]>
+    <script scr = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script-->
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <span id="notesBanner" class="banner" >  
+        <img src="../images/NotesBanner.png">
+     </span>
+    <div id="notes-content">
+        
+        
+        <textarea  id="text" class="input"  placeholder="Start your notes here..."></textarea>
+        <button class="saveEdits" id="saveNotes"> <img src="../images/saveEdits.png"></button>
+        <pre id = "output"></pre>
+    </div>
+</body>
+<script type = "module">
+    //change text area ratio/ space takes up on page 
+
+    import {downloadFile, uploadFile, uploadFileBlob} from "../fileManager.js";
+    import {setNotesPath, getNotesPath} from "../firebaseDnDFlavor.js";
+
+    var userID =localStorage.getItem('currentUid');
+    var groupID = localStorage.getItem("curID");
+    
+    //check if user already has a notes path
+    var userHadNotes = 0;
+    var notesPath = await getNotesPath(userID, groupID);
+    console.log("notes path at line 31 is " + notesPath);
+
+    if(notesPath == "0"){
+        //user does not already have notes
+    }
+    else{
+        var fileLocation = notesPath;
+        var url = await downloadFile(fileLocation);
+        console.log("url is " + "https://cors-anywhere.herokuapp.com/" + url);
+        var message = readText("https://cors-anywhere.herokuapp.com/" + url);
+        userHadNotes = 1;
+
+    }
+
+    var saveMe = document.getElementById('saveNotes');
+    saveMe.addEventListener('click', save, false);
+
+    function readText(url){
+        fetch(url, {
+            
+            })
+        .then( response => response.text() )
+        .then( data => {
+            console.log("text being read is " + data);
+            const test = document.getElementById('text');
+            text.value = data;
+            return data;
+        }); 
+        
+    }
+    async function save(){
+    
+        const notesBox = document.getElementById('text');
+
+        var text = notesBox.value;
+        console.log("text we're saving" + text);
+
+        const file = new Blob([text], { type: 'text/plain' });
+        var path = 'some-child';
+
+        if(userHadNotes != 0){
+            path = "Notes/notes" + userID.toString() + groupID.toString();
+            await uploadFileBlob(file, path);
+        }
+        else{
+            //upload new file
+            path = "Notes/notes" + userID.toString() + groupID.toString();
+            //update firebase
+            var notesPath = "gs://goblin-mode.appspot.com/Notes/notes" + userID.toString() + groupID.toString();
+            await setNotesPath(userID, groupID, notesPath);
+            await uploadFileBlob(file, path);
+        }
+        
+
+    }
+
+
+</script>

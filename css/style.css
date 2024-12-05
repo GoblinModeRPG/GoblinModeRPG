@@ -1,0 +1,1058 @@
+/*general section*/
+:root{
+    --lightest:#fbf2e3;
+    --blue: #5a0e00;
+    --light-blue:#fab24c;
+    --dark-blue: #570f00;
+    --rose: #e75d5b;
+    
+    --grey-purple: #866e86;
+    --sky-blue: #7db6bf;
+    --dark-grey: #465055;
+    --notes-color: #f6e094;
+
+    --red: #b41b0b;
+    --dark-red: #750001;
+    --mid-red: hsla(359, 72%, 26%, 0.658);
+    --dark-brown: #5a0e00;
+    --tangerine: #fab24c;
+    --yellow: #fdde50;
+    --light-beige: #fbf2e3;
+    --manilla: #f9c758;
+    --manilla2: #fbf2e3;
+    
+}
+*{
+    
+    color:#0F2027;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    padding: 0;
+    font-variant: small-caps;
+    
+   
+}
+html{
+    scrollbar-width: thin;
+    scrollbar-color: var(--red);
+}
+body{
+
+    cursor: url('../images/cursor.ico'), auto;
+}
+input, button, .form-sub, nav a:hover, nav div:hover, .sidebar #menubtn, .sidebar ul li .a:hover{
+    cursor: url('../images/pointer.png'), pointer;
+}
+textarea{
+    cursor: url('../images/quill-penBlack.png') 0 53, auto;
+} 
+footer{
+    left:0px;
+    bottom:0px;
+    width:100%;
+    text-align: center;
+    font-size: 1em;
+    background-color: var(--blue);
+    color: #efeae2;
+    padding: 10px;
+}
+button{
+    border:none;
+    background-color: var(--lightest);
+    color: var(--dark-brown);
+    padding:10px 20px;
+    
+  
+    border-radius: 8em;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+button:hover{
+    
+    opacity: 0.8;
+}
+/*welcome page styling*/
+.welcomeBanner{
+    font-size: 1.5em;
+    padding-top: 1rem;
+    height: 10vh;
+    background-color: var(--dark-red);
+    text-align: center;
+    
+}
+#welcome-text{
+    height: 12vh;
+}
+#welcome-text p{
+    visibility: hidden;
+    color: var(--lightest);
+}
+#welcome-text:hover p{
+    visibility: visible;
+}
+#welcome-text:hover{
+    height: 16vh;
+}
+.welcomeBanner h1{
+    color: var(--lightest);
+}
+.welcomeRibbon{
+    padding: 1vh;
+    height: 9vh;
+    width:100%;
+    text-align: center;
+    height: 22vh;
+    background-image: url("../images/banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#goblin-icon{
+    height: 19vh;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+}
+
+/*log in and creat account pages*/
+
+
+.form-uname input[type=text]{
+    width: 30vh;
+    padding: 6px;
+    display: block;
+    font-size: larger;
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+}
+.form-uname label{
+    display: block;
+    font-size: large;
+}
+.form-uname{
+    display: inline-block;
+    
+}
+
+.login-content{
+    min-height: 60vh;
+    min-width: 100vh;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /*background: hsla(0, 0%, 100%, 0.5);*/
+    text-align: center;
+   
+   
+}
+
+#welcome-content, #loginInfo{
+    background-image: url("../images/scroll-log-in.png");
+}
+#createAccInfo{
+    background-image: url("../images/scroll-createAcct.png");
+
+}
+#loginInfo img{
+    margin-top: 30px;
+}
+.login-content img{
+    width: 40vh;
+    
+}
+
+.login-content ul li{
+    list-style-type: none;
+    margin: 1rem;
+}
+.login-content ul{
+    padding-top: 18vh;
+}
+.login-content button{
+    border-image-source: url(../images/border.png);
+    border-image-slice: 54 28;
+    border-image-width: 100px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    font-size: large;
+    background: none;
+   
+}
+#login-btn{
+    font-size: x-large;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+#createacc-btn{
+    font-size: x-large;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.form-sub{
+    display: block;
+    
+    text-align: center
+}
+
+.form-uname label{
+    color: #372c1c;
+    font-size: 2vh;
+}
+.login-background {
+    height: 1000px;
+    position:relative;
+    overflow: hidden;
+}
+.zooming-bg{
+    width: 100%;
+    height: 100%;
+    background-color: black; /* fallback color */
+    background-image:  url("../images/goblin_wharf.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    animation: zoomBG 15s normal forwards ease-in-out infinite;
+}
+/*animation: zoomBG 8s normal forwards ease-in-out infinite;*/
+@keyframes zoomBG {
+    0% {background-size: 100%;}
+    50% {background-size: 150%;}
+    100% {background-size: 100%;}
+}
+
+
+
+/*section for inventory.html*/
+
+#money{
+    display: block;
+    margin-right: 100px;
+    padding: 20px;
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+    float: right;
+    font-size: larger;
+    margin-top: 10px;
+    color: var(--dark-grey);
+    border-image-source: url(../images/border.png);
+    border-image-slice: 120 120 120 120;
+    border-image-width: 65px;
+}
+#money li{
+    padding: 7px;
+    color: var(--dark-grey);
+    text-align: center;
+}
+#money li img{
+    height: 70px;
+}
+#money input{
+    width: 20%;
+    height: 60px;
+    font-size: large;
+    color: var(--dark-grey);
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 12px 20px;
+    text-align: center;
+}
+#money button{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    font-size: large;
+}
+.saveEdits img{
+    height: 120px;
+}
+
+/*spell book and inventory formatting (jsx)*/
+.banner{
+    font-size: 2.5rem;
+    height: 20vh;
+    width: 100%;
+    background-color:var(--manilla2);
+    color: var(--dark-grey);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.banner img{
+    height: 15vh;
+}
+#notesBanner{
+    height: 7vh;
+    margin-top: 2rem;
+}
+#notesBanner img{
+    margin-top: 1rem;
+}
+#spellForm{
+    display: none;
+}
+#spellForm.expand{
+    display: revert;
+}
+#collapsebtn{
+    width: 100%;
+    border-radius: 0%;
+    padding: 0px;
+    background-color: var(--dark-red);
+    color: white;
+}
+#collapsebtn box-icon{
+    opacity: 1;
+}
+
+.btn box-icon{
+    min-width: 20px;
+    text-align: center;
+    height: 20px;
+    border-radius: 12px;
+    line-height: 50px;
+    opacity: .5;
+}
+.form-row input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-row label img{
+    height: 70px;
+}
+.new-spell-form, .new-inv-form{
+    border-radius: 5px;
+    background-color: var(--lightest);
+    padding: 20px;
+    font-size: larger;
+}
+.new-inv-form input, .new-spell-form input{
+    font-size: large;
+}
+#spell-wrap, #inventory-wrap{
+    margin-left: 20px;
+    
+}
+.checkbox-sl{
+    vertical-align: middle;
+    margin-left: 4px;
+    
+}
+
+.sl-inner.active{
+    
+    border-image-source: url(../images/border.png);
+}
+.sl-inner.active li{
+    background-color: white;
+}
+
+#sl-header{
+    padding-top: 20px;
+}
+.sl-inner{
+    list-style-type: none;
+    column-count: 1;
+    padding: 40px;
+    border-style: solid;
+    
+    border-image-slice: 120 120 120 120;
+    border-image-width: 65px;
+    background-clip: padding-box;
+    border-image-source: url(../images/border3.png);
+}
+.sl-inner li{
+    background-color: #ccc;
+}
+#sl-delete, #il-delete{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-image-source: url(../images/border.png);
+    border-image-slice: 54 28;
+    border-image-width: 100px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    font-size: large;
+    background: none;
+}
+#addspell-btn{
+    
+    
+    font-size: large;
+    background: none;
+}
+
+
+
+.btn{
+    
+    font-size: large;
+}
+#inventory-table{
+    width:70%;
+    font-size: larger;
+    color: var(--dark-grey);
+}
+#inventory-title{
+    color:var(--dark-grey);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+#inventory-itemlist, #spelllist{
+    padding:10px;
+    list-style-type: none;
+    
+}
+#inventory-itemlist li{
+    padding:10px;
+}
+
+#inv-body{
+    background-color: var(--lightest);
+}
+#inventory-itemlist button{
+    margin-left: 10px;
+    font-size: medium;
+}
+
+
+
+/*nav bar, feeling cute might delete later*/
+nav{
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center; 
+    width: 100%;
+    text-align: center;
+    background-color: var(--dark-red);
+    
+    
+}
+nav a:link, nav div{
+    color: var(--lightest);
+    text-decoration: none;
+}
+nav a:visited{
+    color: var(--lightest);
+}
+nav a:hover, nav div:hover{
+    color: #CCCCCC;
+    
+}
+nav li{
+    display: inline-block;
+    padding-right: 30px;
+    position: relative;
+}
+nav ul{
+    padding: 5px;
+    list-style-type: none;
+    margin: 0px;
+}
+nav a{
+    display:block;
+    text-decoration: none;
+}
+
+
+
+/*section for the video page display*/
+#join-btn{
+    position: relative;
+    margin-left: 40%;
+    margin-right:60%;
+    margin-top:20%;
+    height: 5rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: x-large;
+}
+#wrapper{
+    display:flex;
+    justify-content: flex-start;
+}
+
+#video-streams{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    height: 90vh;
+    width: 100%;
+    margin:0 auto;
+}
+
+.video-container{
+    max-height: 100%;
+    border: 2px solid black;
+    background-color: #203A49;
+}
+
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+
+#stream-controls{
+    display: none;
+    justify-content: center;
+    margin-top:0.5em;
+}
+
+@media screen and (max-width:1400px){
+    #video-streams{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 95%;
+    }
+}
+
+/*video page sidebar code*/
+
+.sidebar{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: var(--light-blue);
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .main-content{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+.sidebar.active{
+    width: 550px;
+}
+.sidebar #menubtn {
+    position: absolute;
+    color: black;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+.sidebar.active #menubtn {
+    left: 90%;
+}
+.sidebar .top .logo {
+    color: var(--lightest);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+.top .logo i{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+.bold {
+    font-weight:600;
+}
+.sidebar p {
+    opacity: 0;
+}
+.sidebar.active p {
+    opacity: 1;
+}
+.sidebar ul li{
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+   
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li{
+    margin-top: 5vh;
+    margin-bottom: auto;
+}
+.sidebar.active ul li {
+    display: inline-block;
+    
+}
+
+.sidebar ul li .a {
+    color: var(--lightest);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    padding-right: 15px;
+}
+.sidebar ul li .a:hover {
+    background-color: var(--lightest);
+    color: var(--grey-purple);
+    
+    padding-right: 15px;
+}
+.sidebar ul li .a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+.sidebar.active ul li .a i{
+    min-width: 35px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+    white-space: nowrap;
+    display: none;
+}
+.sidebar ul li:hover .tooltip {
+    display: unset;
+    opacity: 0.9;
+    background-color: var(--dark-red);
+    color: #fff;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+.sidebar iframe{
+    height: 70vh;
+    width: 80px;
+    opacity: 0;
+}
+.sidebar.active iframe{
+    opacity: 1;
+    width: 525px;
+    background-color: var(--lightest);
+    transition: all .5s ease;
+}
+
+/*removed position: relative; from tutorial*/
+.main-content{
+    position: relative;
+    background-color: #eee;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+    display: flex;
+}
+
+/*general home page*/
+#home{
+    background-image: url("../images/goblin_city.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color:var(--lightest);
+    min-height: 100vh;
+}
+#groupButtons{
+    text-align: center;
+    
+}
+#groupButtons button{
+    color: var(--dark-grey);
+    margin: 2rem;
+    padding: 0px;
+    border: none;
+   
+    appearance: none;
+    background-color: inherit;  
+    text-align: center; 
+    
+}
+button img{
+    height: 100px;
+    padding: 10px;
+    
+}
+#groupButtons #newGroup img:hover, #groupButtons #joinGroup img:hover{
+    padding: 0px;
+}
+
+#groupButtons button:hover{
+    opacity: 1;
+}
+
+
+/*section for the popup on index*/
+.popup{
+    width: 40vh;
+    font-size: larger;
+    background-color: var(--light-blue);
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--dark-blue);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 20px 20px 20px;
+    color: var(--dark-grey);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    z-index:2;
+}
+
+/*section for the home page group displays*/
+.flipTable{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.flip-box {
+    background-color: transparent;
+
+    /*this is what makes the boxes invisible */
+    display: none;
+    width: 37vh;
+    height: 37vh;
+    
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    padding: 10px;
+    z-index:1;
+}
+  
+  /* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side */
+  .flip-box-front {
+    background-image: url("../images/flipboxFront.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1em;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-image: url("../images/flipboxFront.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+    border-radius: 1em;
+    
+}
+.fbb-info{
+    padding-top: 3rem;
+    text-align: center;
+    position: relative;
+    display:block;
+}
+.flipbox-ul{
+    list-style-type: none;
+}
+.fbb-info h3, .fbb-info button{
+    margin-top: 1rem;
+    font-size: large;
+}
+.fbb-info button{
+    width: 10rem;
+}
+/*icon styling*/
+.flip-box-front img{
+    height:22vh;
+    padding:2rem;
+}
+.flip-box-front div{
+    font-size: x-large;
+    padding-top: 3rem;
+
+}
+
+
+/*group home*/
+#groupHomeWrap{
+    min-height: 100vh;
+}
+
+.groupTable{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    
+}
+
+#groupPage{
+    background-color:var(--lightest);
+}
+#groupNav{
+    width: 3%;
+    text-align: center;
+}
+#displayWindow{
+    height: 100vh;
+    width: 100%;
+    vertical-align: top;
+    background-color: var(--manilla2);
+    
+}
+
+
+.fixed{
+    position:fixed;
+}
+
+/*notes page*/
+#notes-content{
+    text-align: center;
+    background-image: url("../images/notes.png");
+    background-color: var(--manilla2);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 80vh;
+    
+}
+#text{
+    min-height: 65vh;
+    min-width: 90%;
+    border: none;
+    background: none;
+    overflow: hidden;
+    font-size: larger;
+    position: relative;
+    margin-top: 50px;
+   
+}
+#text:hover{
+    overflow: visible;
+}
+.saveEdits{
+    font-size: large;
+    padding:0px;
+    background: none;
+    display: block;
+    margin: auto;
+}
+
+/*image and animation to be thrown out 
+img is effecting the icons on home page*/
+
+
+.main-img {
+    max-width: 40px;
+    z-index: 2;
+    transform: translate(-135px, 88px);
+    position: relative;
+    animation-name: step1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  
+    font-family: Arial;
+    font-size: 26px;
+    text-align: center;
+  }
+  /*each square is 27px*/
+  @keyframes step1 {
+    0%   {left:0px; top:0px;}
+    50% {left:0px; top:135px;}
+    100% {left:-189px; top:135px;}
+  }
+  @keyframes step2 {
+    0% {left:0px; top:135px;}
+    
+  }
+  
+/*faq styling*/
+#faq-wrapper{
+    min-height: 100vh;
+    background-color: var(--lightest);
+    text-align: center;
+}
+#faq-wrapper h1{
+    padding: 2rem;
+}
+#faqTable{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+#icon-links.open{
+    display: contents;
+}
+#icon-links{
+    padding: 1rem;
+    list-style-type: none;
+    display: none;
+}
+#icon-links li{
+    padding: 0.5rem;
+}
+/*settings for sidebar smaller screen*/
+@media (min-width: 900px) {
+    #inventory-itemlist, #spelllist{
+        -moz-column-count: 4;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 4;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+        display: grid;
+        align-items: start;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media(max-width: 900px){
+    #notes-content{
+        background-image: url("../images/notes2.png");
+        height: 70vh;
+    }
+    #text{
+        
+        min-height: 60vh;
+        min-width: 90%;
+       
+    }
+    #saveNotes img{
+        height: 100px;
+    }
+    .banner, .banner img{
+        height: 15vh;
+    }
+    #money{
+        display: inline;
+        height:min-content;
+        margin-right: auto;
+        columns: 5;
+        column-gap: 0cap;
+        padding: 15px;
+        float:calc();
+        text-align: center;
+        width: 100%
+    }
+    #money input{
+        text-align: center;
+        width: 3.2rem;
+    }
+    #money image{
+        margin-top: 10px;
+    }
+    #money li{
+        padding-top: 20px;
+        padding: 10px;
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        float:left;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
+    #money li image{
+        width: 100%;
+        padding: 10px;
+    }
+    #money li #imgG{
+        content: url(../images/goldSmall.png);
+    }
+    #money li #imgS{
+        content: url(../images/silverSmall.png);
+    }
+    #money li #imgC{
+        content: url(../images/copperSmall.png);
+    }
+    #money button{
+        padding-top: 25px;
+    }
+    #money button img{
+        height: 100px;
+    }
+    #inventory-table .new-inv-form{
+        border-image-source: url(../images/border.png);
+        border-image-slice: 120 120 120 120;
+        border-image-width: 50px;
+        margin-top: 10px;
+        
+    }
+    #inventory-table{
+        width: 100%;
+        text-align: center;
+    }
+    #spellForm.expand{
+        border-image-source: url(../images/border.png);
+        border-image-slice: 120 120 120 120;
+        border-image-width: 55px;
+        padding: 30px;
+        margin: 10px;
+    }
+   
+}
