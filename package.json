@@ -15,6 +15,8 @@
     "vite": "^5.2.6"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -22,8 +24,12 @@
   "name": "goblinmode",
   "description": "Video call website with DnD flavor",
   "version": "1.0.0",
+  "homepage": "https://GoblinModeRPG.github.io",
   "main": "AgoraRTC_N-4.17.0.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
 }
