@@ -1,5 +1,5 @@
 import { useState, useEffect, Component  } from "react";
-import { deleteSpellDB, addToSpells, getSpells, getSpellInfo, updatePrep} from "./firebaseDnDFlavor";
+import { deleteSpellDB, addToSpells, getSpells, getSpellInfo, updatePrep} from "../firebaseDnDFlavor";
 import '../css/style.css';
 import 'boxicons'
 
